@@ -17,6 +17,7 @@ atiken_n <- function(n,x) {
 	P_2n <- suc_taylor_n(x,2,P_1n)
 	taylor_k <- 3
 	atiken_k <- 0
+	atiken_k1 <- atiken_k
 	while (atiken_k < n) {
 		At <- suc_atiken_n(P_2n,P_1n,P_n)
 
@@ -28,9 +29,12 @@ atiken_n <- function(n,x) {
 		# contadores
 		taylor_k <- taylor_k + 1
 		atiken_k <- atiken_k + 1
+
+		print(atiken_k1/atiken_k)
+		atiken_k1 <- atiken_k
 	}
 	At
 }
 
 
-atiken_n(10,1)
+atiken_n(20,1)
