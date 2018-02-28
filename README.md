@@ -1,7 +1,7 @@
 # parcial1AnalisisNumerico
 
 ## 1 
-### a<name='1a'></a>
+### <a name='1a'></a>
 
 El algoritmo usado para sumar los elementos de la matriz superior es el siguiente, el cual recibe una matriz cuadrada:
 ```python
@@ -57,8 +57,11 @@ n | Tiempo | Operaciones
 ### c (CORRECCIÓN)
 En este punto se corrige lo puesto en el parcial.
 
-Viendo el algoritmo en 
+Viendo el algoritmo en [1a](#1a) se puede ver directamente que las sumas realizadas son de la forma:
 
+![eq1c1](eq1c1.png)
+
+E
 
 ## 2
 
