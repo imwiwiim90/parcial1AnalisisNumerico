@@ -18,8 +18,6 @@ atiken_n <- function(n,x) {
 	taylor_k <- 3
 	atiken_k <- 0
 
-	# valor previo de atiken
-	At_1 <- suc_atiken_n(P_2n,P_1n,P_n)
 	while (atiken_k < n) {
 		At <- suc_atiken_n(P_2n,P_1n,P_n)
 
@@ -33,10 +31,8 @@ atiken_n <- function(n,x) {
 		atiken_k <- atiken_k + 1
 
 		# convergencia
-		print(paste('convergencia: ',abs(At)/abs(At_1)^1))
-		At_1 <- At
+		print(paste('atiken(',atiken_k,') ',At))
 	}
-	At
 }
 
 

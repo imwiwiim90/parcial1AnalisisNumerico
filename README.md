@@ -95,7 +95,7 @@ suc_atiken_n <- function(P_2n,P_1n,P_n) {
 
 
 Finalmente se utilizó la siguiente función para calcular el n-esimo `n` término de método Atiken, para un valor de `x` asumiendo una formula de taylor dada:
-```python
+```r
 atiken_n <- function(n,x) {
 	P_n <- suc_taylor_n(x,0,0)
 	P_1n <- suc_taylor_n(x,1,P_n)
@@ -103,8 +103,6 @@ atiken_n <- function(n,x) {
 	taylor_k <- 3
 	atiken_k <- 0
 
-	# ayuda para convergencia
-	At_1 <- suc_atiken_n(P_2n,P_1n,P_n)
 	while (atiken_k < n) {
 		At <- suc_atiken_n(P_2n,P_1n,P_n)
 
@@ -118,22 +116,20 @@ atiken_n <- function(n,x) {
 		atiken_k <- atiken_k + 1
 
 		# convergencia
-		print(paste('convergencia: ',abs(At-exp(1))/abs(At_1-exp(1))^1))
-		At_1 <- At
+		print(paste('atiken(',atiken_k,') ',At))
 	}
-	At
 }
 ```
 
 Dividiendo los dos ultimos valores de atiken vemos que estos tienden a `1` como se muestran en la siguiente tabla, por lo tanto la sucesión converge de forma lineal
 
-iteración | p_n/p_{n-1}
+iteración | Atk_n
 ------------ | ----------  
-1 | 0.916666
-2 |  0.989898
-3|  0.998724
-4| 0.99985
-5|  0.99998
+1 | 3
+2 |  2.75
+3|  2.72222
+4| 2.71875
+5|  2.718333
 
 ## 3
 ### a
