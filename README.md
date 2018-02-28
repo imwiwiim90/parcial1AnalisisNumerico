@@ -1,7 +1,7 @@
 # parcial1AnalisisNumerico
 
 ## 1 
-### a
+### a<name='1a'></a>
 
 El algoritmo usado para sumar los elementos de la matriz superior es el siguiente, el cual recibe una matriz cuadrada:
 ```python
@@ -14,8 +14,8 @@ def sum_sup(A):
 ```
 
 ### b
-Para contar el numero de operaciones se utiliza la siguiente clase:
-```
+Para contar el numero de operaciones se utiliza la clase `SumCounter`:
+```python
 class SumCounter():
 	def __init__(self):
 		self.counter = 0
@@ -25,10 +25,10 @@ class SumCounter():
 		self.counter += 1
 		return a + b
 ```
-El cual debe llamar la funcion `sum()` cada vez que se realice una suma para aumentar el contador por lo que el algoritmo original se cambia a `cum = SumCounter.sum(A[i][j],cum)` para que realize el conteo.
+El cual debe llamar la funcion `sum()` cada vez que se realice una suma para aumentar el contador. Por lo que el algoritmo original se cambia a `cum = SumCounter.sum(A[i][j],cum)` para que realize el conteo de operaciones.
 
-del mismo modo se utiliza la clase `StopWatch()`.
-```
+Del mismo modo se utiliza la clase `StopWatch`:
+```python
 class StopWatch():
 	start_time = 0
 	def __init__(self):
@@ -41,7 +41,7 @@ class StopWatch():
 		return time.time() - start_time
 ```
 
-El cual debe reiniciarse cada vez que se va a medir el tiempo.
+El cual debe reiniciarse cada vez que se va a medir el tiempo. Y la función `time()` da el valor transcurrido en segundos desde el último llamado a la función `reset()`.
 
 Los resultados con diferentes valores son los siguientes:
 
@@ -53,6 +53,12 @@ n | Tiempo | Operaciones
 10| 0.0002 | 55
 20| 0.0004 | 120
 100|  0.007 | 5050
+
+### c (CORRECCIÓN)
+En este punto se corrige lo puesto en el parcial.
+
+Viendo el algoritmo en 
+
 
 ## 2
 
@@ -77,7 +83,7 @@ suc_atiken_n <- function(P_2n,P_1n,P_n) {
 
 
 finalmente se utilizó la siguiente función para calcular el n-esimo `n` termino de método atiken, para un valor de `x` asumiento todos la función dada en el parcial.
-```
+```python
 atiken_n <- function(n,x) {
 	P_n <- suc_taylor_n(x,0,0)
 	P_1n <- suc_taylor_n(x,1,P_n)
