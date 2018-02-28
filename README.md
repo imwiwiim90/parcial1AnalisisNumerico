@@ -121,7 +121,7 @@ atiken_n <- function(n,x) {
 }
 ```
 
-Dividiendo los dos ultimos valores de atiken vemos que estos tienden a `1` como se muestran en la siguiente tabla, por lo tanto la sucesión converge de forma lineal
+Imprimiendo los valores que toma la serie del método Atiken podemos ver como va convergiendo la serie.
 
 iteración | Atk_n
 ------------ | ----------  
