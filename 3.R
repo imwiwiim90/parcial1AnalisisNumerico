@@ -28,5 +28,11 @@ newton_g <- function(f,x0,E) {
 
 f <- function (x) (log(x+2) - sin(x))
 
-secant(f, -1.8, 0, 10e-7)
-newton_g(f,-1.8,10e-5)
+print('secant')
+x <- secant(f, -1.8, 0, 1e-7)
+print(paste('x',x))
+print(paste('f(x)',f(x)))
+print('newton generalizado')
+x <- newton_g(f,-1.8,1e-5)
+print(paste('x',x))
+print(paste('f(x)',f(x)))
