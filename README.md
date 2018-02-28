@@ -61,7 +61,10 @@ Viendo el algoritmo en [1a](#1a) se puede ver directamente que las sumas realiza
 
 ![eq1c1](eq1c1.png)
 
-E
+Debido a que las únicas operaciones realizadas son sumas, si reemplazamos `a_ij` por `1` tendremos las sumas realizadas.
+
+![eq1c2](eq1c2.png)
+![eq1c3](eq1c3.png)
 
 ## 2
 
